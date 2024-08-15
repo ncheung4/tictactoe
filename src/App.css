@@ -36,3 +36,58 @@
     transform: rotate(360deg);
   }
 }
+
+.square {
+  width: 80px;        /* Set a fixed width for the square */
+  height: 80px;       /* Set a fixed height for the square */
+  font-size: 2rem;    /* Font size for X and O */
+  line-height: 80px;  /* Align text vertically */
+  text-align: center; /* Center text horizontally */
+  background-color: #f0f0f0; /* Light background color */
+  border: 2px solid #ddd; /* Border color and thickness */
+  cursor: pointer;    /* Pointer cursor on hover */
+  margin: 4px;        /* Margin between squares */
+  box-sizing: border-box; /* Include padding and border in element's total width and height */
+}
+
+.square:focus {
+  outline: none;      /* Remove default focus outline */
+}
+
+.board-row {
+  display: flex;
+  justify-content: center; /* Center rows horizontally */
+}
+
+.game-board {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Center board vertically */
+}
+
+@media (max-width: 600px) {
+  .square {
+    width: 60px;      /* Adjust width for smaller screens */
+    height: 60px;     /* Adjust height for smaller screens */
+    font-size: 1.5rem;  /* Adjust font size for smaller screens */
+    line-height: 60px;  /* Align text vertically for smaller screens */
+  }
+}
+
+@media (min-width: 1200px) {
+  .game-board {
+    width: 50%; /* Adjust width for larger screens */
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1199px) {
+  .game-board {
+    width: 70%; /* Adjust width for medium screens */
+  }
+}
+
+@media (max-width: 767px) {
+  .game-board {
+    width: 90%; /* Adjust width for smaller screens */
+  }
+}
